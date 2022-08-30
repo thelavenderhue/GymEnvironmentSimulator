@@ -143,7 +143,7 @@ class IntersectionEnv(gym.Env):
             canvas,
             (255, 0, 0),
             pygame.Rect(
-                4 * pix_square_size * self._target_location,
+                self._target_location,
                 (pix_square_size, pix_square_size),
             ),
         )
