@@ -135,7 +135,7 @@ class IntersectionEnv(gym.Env):
         canvas = pygame.Surface((self.window_size, self.window_size))
         canvas.fill((255, 255, 255))
         pix_square_size = (
-            self.window_size / 512
+            1
         )  # The size of a single grid square in pixels
 
         # First we draw the target
