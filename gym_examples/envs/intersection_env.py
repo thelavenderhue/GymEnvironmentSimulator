@@ -11,6 +11,10 @@ class IntersectionEnv(gym.Env):
         self.window_size = 512  # The size of the PyGame window
         size = 512
 
+        self._agent_location = (180, 410)
+
+        self._target_location = (180, 500)
+
         # Observations are dictionaries with the agent's and the target's location.
         # Each location is encoded as an element of {0, ..., `size`}^2, i.e. MultiDiscrete([size, size]).
         self.observation_space = spaces.Dict(
@@ -58,9 +62,10 @@ class IntersectionEnv(gym.Env):
 
     def _get_info(self):
         return {
-            "distance": np.linalg.norm(
-                self._agent_location - self._target_location, ord=1
-            )
+            # "distance": np.linalg.norm(
+            #     self._agent_location - self._target_location, ord=1
+            # )
+            "distance": 5
         }
 
     def reset(self, seed=None, return_info=False, options=None):
