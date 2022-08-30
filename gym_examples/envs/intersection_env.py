@@ -151,7 +151,7 @@ class IntersectionEnv(gym.Env):
         pygame.draw.circle(
             canvas,
             (0, 0, 255),
-            (self._agent_location + 0.5) * pix_square_size,
+            (self._agent_location + 1) * pix_square_size,
             pix_square_size / 3,
         )
 
